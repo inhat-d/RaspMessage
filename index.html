@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prompt GPT-3.5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Chat with GPT-3.5</h1>
+    <form id="prompt-form">
+        <label for="prompt">Enter your prompt:</label>
+        <input type="text" id="prompt" name="prompt">
+        <button type="submit">Send Prompt</button>
+    </form>
+    <div id="chatgpt-response"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#prompt-form').submit(function(event) {
+                event.preventDefault();
+                var prompt = $('#prompt').val();
+                $.ajax({
+                    url: '/chatgpt',
+                    type: 'POST',
+                    data: JSON.stringify({prompt: prompt}),
+                    contentType: "application/json",
+                    dataType: 'json',
+                    success: function(response) {
+                        $('#chatgpt-response').text(response.answer);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
