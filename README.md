@@ -7,7 +7,7 @@ The main idea was to create a website through which I could receive answers from
 
 ## Libraries
 
-Code use `openai` library.
+Code use `openai`, `flask` and `os` libraries
 
 ## That's all
 
