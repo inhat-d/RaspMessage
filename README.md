@@ -8,6 +8,7 @@ The main idea was to create a website through which I could receive answers from
 ## Libraries
 
 Code use `openai`, `flask` and `os` libraries
+And so, if you want to try - use `ngrok`
 
 ## That's all
 
