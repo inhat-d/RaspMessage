@@ -12,4 +12,4 @@ And so, if you want to try - use `ngrok`
 
 ## That's all
 
-i to young for long README
+i too young for long README
